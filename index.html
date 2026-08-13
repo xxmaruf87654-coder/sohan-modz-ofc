@@ -9,14 +9,12 @@
 body{font-family:Arial,sans-serif;background:#080912;color:#fff}
 header{position:sticky;top:0;z-index:20;background:#17182b;border-bottom:2px solid #ff1744;padding:14px 18px}
 .nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:800;color:#fff}
-.logo span{color:#ff1744}
+.logo{font-size:25px;font-weight:800;color:#fff}.logo span{color:#ff1744}
 .nav a{color:#fff;text-decoration:none;margin-left:14px}
 .hero{max-width:1100px;margin:auto;padding:18px}
-.banner{height:220px;border-radius:14px;background:url('BR-MODS.jpg') center/cover;position:relative;overflow:hidden}
+.banner{height:220px;border-radius:14px;background:url('https://raw.githubusercontent.com/xxmaruf87654-coder/sohan-modz-ofc/main/BR-MODS.jpg') center/cover;position:relative;overflow:hidden}
 .banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.1))}
-.bannerText{position:relative;z-index:1;padding:48px 25px}
-.bannerText h1{font-size:34px}.bannerText p{margin-top:8px;color:#ddd}
+.bannerText{position:relative;z-index:1;padding:48px 25px}.bannerText h1{font-size:34px}.bannerText p{margin-top:8px;color:#ddd}
 .categories{max-width:1100px;margin:15px auto;padding:0 18px;display:flex;gap:10px}
 .cat{border:1px solid #ff1744;background:#17182b;color:#fff;padding:11px 22px;border-radius:25px;cursor:pointer}
 .cat.active,.cat:hover{background:#ff1744}
@@ -24,184 +22,86 @@ header{position:sticky;top:0;z-index:20;background:#17182b;border-bottom:2px sol
 .title{text-align:center;margin-bottom:20px}.title h2{font-size:30px}.title h2 span{color:#ff1744}
 .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .card{background:#17182b;border:1px solid #52203a;border-radius:16px;overflow:hidden}
-.card img{width:100%;height:175px;object-fit:cover;display:block}
+.card img{width:100%;height:175px;object-fit:cover;display:block;background:#0d0e1b}
 .content{padding:14px}.content h3{font-size:19px}.desc{color:#aaa;margin:8px 0;line-height:1.5}
 .tags{display:flex;flex-wrap:wrap;gap:7px}.tag{background:#0d0e1b;padding:7px 9px;border-radius:7px;font-size:13px}
 .bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
 .price{font-size:22px;color:#18dc86;font-weight:800}.buy{background:#ff1744;border:0;color:#fff;padding:10px 18px;border-radius:9px;font-size:16px;font-weight:bold;cursor:pointer}
-.demo{background:#ff5260!important}
 footer{text-align:center;color:#aaa;padding:30px}
-.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:50;padding:18px;overflow:auto}
-.modal{max-width:520px;margin:40px auto;background:#17182b;border:1px solid #6b2543;border-radius:18px;overflow:hidden}
-.modalHead{padding:18px;border-bottom:1px solid #402038;display:flex;justify-content:space-between}
-.close{font-size:25px;cursor:pointer;color:#aaa}.steps{display:flex;justify-content:center;gap:45px;padding:18px}
-.step{width:38px;height:38px;border-radius:50%;background:#0d0e1b;border:2px solid #ff1744;display:grid;place-items:center}.step.on{background:#ff1744}
-.form{padding:18px}.form label{display:block;color:#ccc;margin:12px 0 6px}
-select,input{width:100%;padding:13px;border-radius:9px;border:1px solid #57203b;background:#0d0e1b;color:#fff;font-size:16px}
-.paybox{background:#0d0e1b;border:1px solid #4b2036;border-radius:10px;padding:14px;margin:12px 0;line-height:1.8}
-.payrow{display:flex;justify-content:space-between;align-items:center}.copy{background:#33364b;color:#fff;border:0;padding:7px 10px;border-radius:7px}
-.next{width:100%;margin-top:14px;padding:14px;border:0;border-radius:10px;background:#16c784;color:#fff;font-weight:bold;font-size:17px}
-.note{font-size:13px;color:#aaa;margin-top:10px;line-height:1.5}
-.hidden{display:none}
-.success{background:#122d25;border:1px solid #16c784;padding:15px;border-radius:10px;line-height:1.6}
 @media(max-width:600px){.nav a{font-size:13px;margin-left:7px}.logo{font-size:20px}.banner{height:190px}.bannerText h1{font-size:28px}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="nav">
-    <div class="logo">SOHAN <span>MODZ OFC</span></div>
-    <div><a href="#home">Home</a><a href="#products">Products</a></div>
-  </div>
+<div class="nav">
+<div class="logo">SOHAN <span>MODZ OFC</span></div>
+<div><a href="#home">Home</a><a href="#products">Products</a></div>
+</div>
 </header>
 
 <section class="hero" id="home">
-  <div class="banner">
-    <div class="bannerText">
-      <h1>SOHAN MODZ OFC</h1>
-      <p>Premium Digital Products & Services</p>
-    </div>
-  </div>
+<div class="banner">
+<div class="bannerText">
+<h1>SOHAN MODZ OFC</h1>
+<p>Premium Digital Products & Services</p>
+</div>
+</div>
 </section>
 
 <div class="categories">
-  <button class="cat active" onclick="filterProducts('all',this)">▦ All</button>
-  <button class="cat" onclick="filterProducts('nonroot',this)">NON ROOT</button>
-  <button class="cat" onclick="filterProducts('root',this)">ROOT</button>
+<button class="cat active" onclick="filterProducts('all',this)">▦ All</button>
+<button class="cat" onclick="filterProducts('nonroot',this)">NON ROOT</button>
+<button class="cat" onclick="filterProducts('root',this)">ROOT</button>
 </div>
 
 <section class="section" id="products">
-  <div class="title"><h2>আমাদের <span>পণ্যসমূহ</span></h2></div>
-  <div class="products">
+<div class="title"><h2>আমাদের <span>পণ্যসমূহ</span></h2></div>
+<div class="products">
 
-    <div class="card" data-cat="nonroot">
-      <img src="BR-MODS.jpg" alt="BR MODS">
-      <div class="content">
-        <h3>BR MODS</h3>
-        <p class="desc">Premium digital service. বিস্তারিত জানতে বা অর্ডার করতে কিনুন বাটনে চাপুন।</p>
-        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span><span class="tag">🛡 Support</span></div>
-        <div class="bottom"><div class="price">৳80.00</div><button class="buy" onclick="openOrder('BR MODS',80)">🛒 কিনুন</button></div>
-      </div>
-    </div>
+<div class="card" data-cat="nonroot">
+<img src="https://raw.githubusercontent.com/xxmaruf87654-coder/sohan-modz-ofc/main/BR-MODS.jpg" alt="BR MODS">
+<div class="content">
+<h3>BR MODS</h3>
+<p class="desc">Premium digital service. বিস্তারিত জানতে বা অর্ডার করতে কিনুন বাটনে চাপুন।</p>
+<div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span><span class="tag">🛡 Support</span></div>
+<div class="bottom"><div class="price">৳80.00</div><button class="buy" onclick="alert('BR MODS Order')">🛒 কিনুন</button></div>
+</div>
+</div>
 
-    <div class="card" data-cat="nonroot">
-      <img src="DRIP-CLIENT.jpg" alt="DRIP CLIENT">
-      <div class="content">
-        <h3>Digital Service 02</h3>
-        <p class="desc">সাশ্রয়ী digital service ও customer support.</p>
-        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span></div>
-        <div class="bottom"><div class="price">৳100.00</div><button class="buy" onclick="openOrder('Digital Service 02',100)">🛒 কিনুন</button></div>
-      </div>
-    </div>
+<div class="card" data-cat="nonroot">
+<img src="https://raw.githubusercontent.com/xxmaruf87654-coder/sohan-modz-ofc/main/DRIP-CLIENT.jpg" alt="DRIP CLIENT">
+<div class="content">
+<h3>DRIP CLIENT</h3>
+<p class="desc">Premium digital service ও customer support.</p>
+<div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span></div>
+<div class="bottom"><div class="price">৳100.00</div><button class="buy" onclick="alert('DRIP CLIENT Order')">🛒 কিনুন</button></div>
+</div>
+</div>
 
-    <div class="card" data-cat="root">
-      <img src="HG-CHEAT.jpg" alt="HG CHEAT">
-      <div class="content">
-        <h3>Digital Service 03</h3>
-        <p class="desc">Premium digital service with fast support.</p>
-        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">🛡 Support</span></div>
-        <div class="bottom"><div class="price">৳150.00</div><button class="buy" onclick="openOrder('Digital Service 03',150)">🛒 কিনুন</button></div>
-      </div>
-    </div>
+<div class="card" data-cat="root">
+<img src="https://raw.githubusercontent.com/xxmaruf87654-coder/sohan-modz-ofc/main/HG-CHEAT.jpg" alt="HG CHEAT">
+<div class="content">
+<h3>HG CHEAT</h3>
+<p class="desc">Premium digital service with fast support.</p>
+<div class="tags"><span class="tag">🏷 Premium</span><span class="tag">🛡 Support</span></div>
+<div class="bottom"><div class="price">৳150.00</div><button class="buy" onclick="alert('HG CHEAT Order')">🛒 কিনুন</button></div>
+</div>
+</div>
 
-  </div>
+</div>
 </section>
 
 <footer>© 2026 Sohan Modz OFC • WhatsApp: 01312259496</footer>
 
-<div class="overlay" id="orderModal">
-  <div class="modal">
-    <div class="modalHead"><h2 id="modalTitle">Order</h2><span class="close" onclick="closeOrder()">×</span></div>
-    <div class="steps"><div class="step on">1</div><div class="step" id="s2">2</div><div class="step" id="s3">3</div></div>
-
-    <div class="form" id="step1">
-      <label>অপশন নির্বাচন</label>
-      <select id="variant" onchange="updateTotal()">
-        <option value="1">-- ভেরিয়েন্ট বাছুন --</option>
-        <option value="1">1 Day</option>
-        <option value="3">3 Days</option>
-        <option value="7">7 Days</option>
-        <option value="15">15 Days</option>
-        <option value="30">30 Days</option>
-      </select>
-      <label>পরিমাণ</label>
-      <input id="qty" type="number" min="1" value="1" onchange="updateTotal()">
-      <div class="paybox"><b>মোট মূল্য:</b> <span id="total">৳0.00</span></div>
-      <button class="next" onclick="goStep2()">→ এগিয়ে যান</button>
-    </div>
-
-    <div class="form hidden" id="step2">
-      <p>পেমেন্টের মাধ্যম নির্বাচন করুন:</p>
-      <label>Payment Method</label>
-      <select id="method">
-        <option value="bKash">bKash — Send Money</option>
-        <option value="Nagad">Nagad — Send Money</option>
-      </select>
-      <div class="paybox">
-        <div class="payrow"><span>🟣 bKash: <b>01326048602</b></span><button class="copy" onclick="copyNum('01326048602')">Copy</button></div>
-        <div class="payrow"><span>🟠 Nagad: <b>01302858682</b></span><button class="copy" onclick="copyNum('01302858682')">Copy</button></div>
-      </div>
-      <p class="note">উপরের নম্বরে Send Money করার পর Transaction ID সংগ্রহ করুন। তারপর পরের ধাপে Transaction ID দিন।</p>
-      <button class="next" onclick="goStep3()">→ Transaction ID দিন</button>
-    </div>
-
-    <div class="form hidden" id="step3">
-      <div class="success">পেমেন্ট করার পর সঠিক Transaction ID দিন। ভুল Transaction ID দিলে অর্ডার যাচাই করা যাবে না।</div>
-      <label>Transaction ID</label>
-      <input id="trx" placeholder="যেমন: 8A1B2C3D4E">
-      <label>আপনার নাম</label>
-      <input id="customer" placeholder="আপনার নাম">
-      <button class="next" onclick="submitOrder()">✓ Order Submit</button>
-      <p class="note">Submit করলে WhatsApp-এ আপনার order details খুলবে। সেখানে Send চাপলেই অর্ডার পাঠানো হবে।</p>
-    </div>
-  </div>
-</div>
-
 <script>
-let productName='', basePrice=0;
-
-function openOrder(name,price){
-  productName=name;basePrice=price;
-  document.getElementById('modalTitle').textContent=name;
-  document.getElementById('orderModal').style.display='block';
-  showStep(1); updateTotal();
-}
-function closeOrder(){document.getElementById('orderModal').style.display='none'}
-function showStep(n){
-  [1,2,3].forEach(i=>document.getElementById('step'+i).classList.toggle('hidden',i!==n));
-  document.querySelectorAll('.step').forEach((e,i)=>e.classList.toggle('on',i<n));
-  if(n===2)document.getElementById('s2').classList.add('on');
-  if(n===3){document.getElementById('s2').classList.add('on');document.getElementById('s3').classList.add('on')}
-}
-function updateTotal(){
-  const days=Number(document.getElementById('variant').value);
-  const qty=Math.max(1,Number(document.getElementById('qty').value||1));
-  let multiplier={1:1,3:2.25,7:3.75,15:6.25,30:9.375}[days]||1;
-  document.getElementById('total').textContent='৳'+(basePrice*multiplier*qty).toFixed(2);
-}
-function goStep2(){
-  if(document.getElementById('variant').value==='1'){alert('দয়া করে একটি ভেরিয়েন্ট নির্বাচন করুন।');return}
-  showStep(2);
-}
-function goStep3(){showStep(3)}
-function copyNum(n){navigator.clipboard.writeText(n).then(()=>alert('নম্বর Copy হয়েছে: '+n))}
-function submitOrder(){
-  const trx=document.getElementById('trx').value.trim();
-  const customer=document.getElementById('customer').value.trim()||'Customer';
-  if(!trx){alert('Transaction ID দিন।');return}
-  const days=document.getElementById('variant').value;
-  const qty=document.getElementById('qty').value;
-  const method=document.getElementById('method').value;
-  const total=document.getElementById('total').textContent;
-  const msg=`হ্যালো Sohan Modz OFC,%0A%0A🛒 Order Request%0AProduct: ${productName}%0AVariant: ${days} Day(s)%0AQuantity: ${qty}%0APayment: ${method}%0ATotal: ${total}%0AName: ${encodeURIComponent(customer)}%0ATransaction ID: ${encodeURIComponent(trx)}%0A%0Aআমি Send Money payment করেছি। দয়া করে আমার order যাচাই করুন।`;
-  window.open('https://wa.me/8801312259496?text='+msg,'_blank');
-}
 function filterProducts(cat,btn){
-  document.querySelectorAll('.cat').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
-  document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none');
+document.querySelectorAll('.cat').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+document.querySelectorAll('.card').forEach(c=>{
+c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+});
 }
-window.onclick=e=>{if(e.target===document.getElementById('orderModal'))closeOrder()}
 </script>
 </body>
 </html>
