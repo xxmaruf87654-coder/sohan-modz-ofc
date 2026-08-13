@@ -1,126 +1,635 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sohan Modz OFC</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Sohan Modz OFC</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0f14;
-      color: white;
-      text-align: center;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+body{
+  font-family:Arial,sans-serif;
+  background:#080912;
+  color:#fff;
+}
 
-    .logo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #00ff88;
-      margin-bottom: 20px;
-    }
+/* HEADER */
+header{
+  height:75px;
+  background:#17182b;
+  border-bottom:2px solid #ff1744;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
 
-    h1 {
-      font-size: 35px;
-      color: #00ff88;
-      margin-bottom: 12px;
-    }
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-    .subtitle {
-      color: #ccc;
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background:#11121f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  border:1px solid #ff1744;
+}
 
-    .card {
-      background: #151b23;
-      border: 1px solid #26313d;
-      border-radius: 18px;
-      padding: 25px;
-      margin-bottom: 20px;
-    }
+.logo-area h2{
+  font-size:21px;
+  letter-spacing:.5px;
+}
 
-    .card h2 {
-      margin-bottom: 12px;
-      color: #00ff88;
-    }
+.header-buttons{
+  display:flex;
+  gap:10px;
+}
 
-    .card p {
-      color: #ddd;
-      line-height: 1.7;
-    }
+.header-btn{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  border:1px solid #ff1744;
+  background:#11121f;
+  color:white;
+  font-size:21px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: #00c96b;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:25px 15px 50px;
+}
 
-    .btn:hover {
-      background: #00a957;
-      transform: scale(1.03);
-    }
+/* CATEGORY */
+.categories{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:10px 0 35px;
+}
 
-    footer {
-      margin-top: 35px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+.category{
+  padding:12px 25px;
+  border-radius:12px;
+  border:1px solid #ff1744;
+  background:#17182b;
+  color:#ddd;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.category.active{
+  background:#ff1744;
+  color:white;
+  box-shadow:0 0 20px rgba(255,23,68,.35);
+}
+
+/* TITLE */
+.title{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.title-line{
+  flex:1;
+  height:1px;
+  background:#ff1744;
+}
+
+.title h1{
+  font-size:25px;
+  letter-spacing:2px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+/* CARD */
+.card{
+  background:#17182b;
+  border:1px solid #472034;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.card-top{
+  padding:15px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.product-icon{
+  width:55px;
+  height:55px;
+  border-radius:12px;
+  background:#10111e;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.card-top h3{
+  font-size:17px;
+}
+
+.status{
+  display:block;
+  color:#19d889;
+  font-size:13px;
+  margin-top:6px;
+}
+
+/* PRODUCT IMAGE */
+.product-image{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  background:#10111e;
+  display:block;
+}
+
+/* CARD CONTENT */
+.card-content{
+  padding:15px;
+}
+
+.description{
+  color:#aeb0c0;
+  font-size:14px;
+  margin-bottom:14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* TAGS */
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:15px;
+}
+
+.tag{
+  background:#0d0e19;
+  border-radius:7px;
+  padding:7px 10px;
+  color:#bfc2d0;
+  font-size:13px;
+}
+
+/* PRICE */
+.price-area{
+  border-top:1px solid #402034;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.price{
+  color:#20d993;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.buttons{
+  display:flex;
+  gap:8px;
+}
+
+.btn{
+  border:0;
+  border-radius:10px;
+  padding:12px 18px;
+  font-size:15px;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.demo{
+  background:#ff4b52;
+}
+
+.buy{
+  background:#ff101c;
+}
+
+.btn:hover{
+  opacity:.85;
+  transform:scale(1.02);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  color:#777;
+  margin-top:40px;
+  padding:20px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .categories{
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding-bottom:5px;
+  }
+
+  .category{
+    white-space:nowrap;
+  }
+
+  .price-area{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .price{
+    text-align:left;
+  }
+
+  .buttons{
+    width:100%;
+  }
+
+  .btn{
+    flex:1;
+    text-align:center;
+  }
+
+  .product-image{
+    height:200px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HEADER -->
+<header>
 
-    <div class="card">
-      <h1>SOHAN MODZ OFC</h1>
-      <p class="subtitle">
-        Welcome to our official website
-      </p>
+  <div class="logo-area">
+    <div class="logo">⚡</div>
+    <h2>SOHAN MODZ OFC</h2>
+  </div>
 
-      <h2>আমাদের সার্ভিস</h2>
+  <div class="header-buttons">
+    <button class="header-btn">👤</button>
+    <button class="header-btn">⚙️</button>
+  </div>
 
-      <p>
-        আমাদের ওয়েবসাইটে বিভিন্ন ধরনের ডিজিটাল সার্ভিস সম্পর্কে
-        তথ্য ও আপডেট পাবেন। যেকোনো সার্ভিস নেওয়ার আগে বিস্তারিত
-        তথ্য যাচাই করে নিন।
-      </p>
+</header>
 
-      <a class="whatsapp"
-   href="https://wa.me/8801312259496"
-   target="_blank">
-   📱 WhatsApp এ যোগাযোগ করুন
-    
-     </a>
-    </div>
 
-    <footer>
-      © 2026 Sohan Modz OFC — All Rights Reserved
-    </footer>
+<div class="container">
+
+  <!-- CATEGORY -->
+  <div class="categories">
+
+    <button class="category active" onclick="showCategory('all',this)">
+      ▦ All
+    </button>
+
+    <button class="category" onclick="showCategory('nonroot',this)">
+      NON ROOT
+    </button>
+
+    <button class="category" onclick="showCategory('root',this)">
+      ROOT
+    </button>
 
   </div>
 
+
+  <!-- TITLE -->
+  <div class="title">
+    <div class="title-line"></div>
+    <h1>NON ROOT</h1>
+    <div class="title-line"></div>
+  </div>
+
+
+  <!-- PRODUCTS -->
+  <div class="products">
+
+
+    <!-- PRODUCT 1 -->
+    <div class="card" data-category="nonroot">
+
+      <div class="card-top">
+
+        <div class="product-icon">🤖</div>
+
+        <div>
+          <h3>Digital Service 01</h3>
+          <span class="status">● Available</span>
+        </div>
+
+      </div>
+
+      <!-- নিজের ছবির URL এখানে বসাবে -->
+      <img
+        class="product-image"
+        src="https://via.placeholder.com/600x350/111827/ffffff?text=SOHAN+MODZ"
+        alt="Product">
+
+      <div class="card-content">
+
+        <p class="description">
+          Premium digital service with fast support.
+        </p>
+
+        <div class="tags">
+          <span class="tag">🏷️ Premium</span>
+          <span class="tag">⚡ Fast</span>
+          <span class="tag">🛡️ Support</span>
+        </div>
+
+      </div>
+
+      <div class="price-area">
+
+        <div class="price">
+          🏷️ মূল্য ৳80.00
+        </div>
+
+        <div class="buttons">
+
+          <a class="btn demo"
+             href="#"
+             target="_blank">
+             ▶ Demo
+          </a>
+
+          <a class="btn buy"
+             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2001%20নিতে%20চাই"
+             target="_blank">
+             🛒 কিনুন
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="card" data-category="nonroot">
+
+      <div class="card-top">
+
+        <div class="product-icon">🤖</div>
+
+        <div>
+          <h3>Digital Service 02</h3>
+          <span class="status">● Available</span>
+        </div>
+
+      </div>
+
+      <img
+        class="product-image"
+        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+02"
+        alt="Product">
+
+      <div class="card-content">
+
+        <p class="description">
+          Quality digital service and online support.
+        </p>
+
+        <div class="tags">
+          <span class="tag">🏷️ Premium</span>
+          <span class="tag">⚡ Fast</span>
+          <span class="tag">💬 Support</span>
+        </div>
+
+      </div>
+
+      <div class="price-area">
+
+        <div class="price">
+          🏷️ মূল্য ৳100.00
+        </div>
+
+        <div class="buttons">
+
+          <a class="btn demo"
+             href="#"
+             target="_blank">
+             ▶ Demo
+          </a>
+
+          <a class="btn buy"
+             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2002%20নিতে%20চাই"
+             target="_blank">
+             🛒 কিনুন
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+    <div class="card" data-category="root">
+
+      <div class="card-top">
+
+        <div class="product-icon">🤖</div>
+
+        <div>
+          <h3>Digital Service 03</h3>
+          <span class="status">● Available</span>
+        </div>
+
+      </div>
+
+      <img
+        class="product-image"
+        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+03"
+        alt="Product">
+
+      <div class="card-content">
+
+        <p class="description">
+          Premium service with customer support.
+        </p>
+
+        <div class="tags">
+          <span class="tag">⚡ Fast</span>
+          <span class="tag">💎 Premium</span>
+          <span class="tag">🛡️ Support</span>
+        </div>
+
+      </div>
+
+      <div class="price-area">
+
+        <div class="price">
+          🏷️ মূল্য ৳70.00
+        </div>
+
+        <div class="buttons">
+
+          <a class="btn demo"
+             href="#"
+             target="_blank">
+             ▶ Demo
+          </a>
+
+          <a class="btn buy"
+             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2003%20নিতে%20চাই"
+             target="_blank">
+             🛒 কিনুন
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+    <div class="card" data-category="root">
+
+      <div class="card-top">
+
+        <div class="product-icon">🤖</div>
+
+        <div>
+          <h3>Digital Service 04</h3>
+          <span class="status">● Available</span>
+        </div>
+
+      </div>
+
+      <img
+        class="product-image"
+        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+04"
+        alt="Product">
+
+      <div class="card-content">
+
+        <p class="description">
+          Affordable digital service for customers.
+        </p>
+
+        <div class="tags">
+          <span class="tag">⚡ Fast</span>
+          <span class="tag">🏷️ Low Price</span>
+          <span class="tag">💬 Support</span>
+        </div>
+
+      </div>
+
+      <div class="price-area">
+
+        <div class="price">
+          🏷️ মূল্য ৳30.00
+        </div>
+
+        <div class="buttons">
+
+          <a class="btn demo"
+             href="#"
+             target="_blank">
+             ▶ Demo
+          </a>
+
+          <a class="btn buy"
+             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2004%20নিতে%20চাই"
+             target="_blank">
+             🛒 কিনুন
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <footer>
+    © 2026 Sohan Modz OFC — All Rights Reserved
+  </footer>
+
+</div>
+
+
+<script>
+
+function showCategory(category,button){
+
+  document.querySelectorAll(".category").forEach(function(btn){
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  document.querySelectorAll(".card").forEach(function(card){
+
+    if(category === "all"){
+      card.style.display = "block";
+    }
+
+    else if(card.dataset.category === category){
+      card.style.display = "block";
+    }
+
+    else{
+      card.style.display = "none";
+    }
+
+  });
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
