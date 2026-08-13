@@ -3,604 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sohan Modz OFC</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#080b12;
-    color:#fff;
-}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#111827;
-    border-bottom:2px solid #ff1744;
-    padding:15px;
-}
-
-.nav{
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    color:#ff1744;
-}
-
-.menu a{
-    color:#fff;
-    text-decoration:none;
-    margin-left:15px;
-}
-
-.hero{
-    text-align:center;
-    padding:55px 20px;
-    background:linear-gradient(135deg,#111827,#080b12);
-}
-
-.hero h1{
-    font-size:38px;
-    color:#ff1744;
-    margin-bottom:12px;
-}
-
-.hero p{
-    color:#ddd;
-    line-height:1.7;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 22px;
-    background:#ff1744;
-    color:#fff;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:30px 15px;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.title h2{
-    color:#ff1744;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#111827;
-    border:1px solid #263044;
-    border-radius:12px;
-    overflow:hidden;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#ff1744;
-}
-
-.product-image{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    display:block;
-}
-
-.card-content{
-    padding:18px;
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#fff;
-}
-
-.description{
-    color:#aaa;
-    font-size:14px;
-    line-height:1.6;
-}
-
-.price{
-    margin-top:15px;
-    font-size:22px;
-    font-weight:bold;
-    color:#00e676;
-}
-
-.buy{
-    display:block;
-    text-align:center;
-    margin-top:15px;
-    padding:11px;
-    background:#25d366;
-    color:#fff;
-    text-decoration:none;
-    border-radius:7px;
-    font-weight:bold;
-}
-
-.badge{
-    display:inline-block;
-    margin-top:10px;
-    padding:5px 9px;
-    background:#202938;
-    color:#ff1744;
-    border-radius:5px;
-    font-size:12px;
-}
-
-.about{
-    text-align:center;
-    background:#111827;
-    border-radius:12px;
-    padding:30px 20px;
-    line-height:1.8;
-}
-
-footer{
-    margin-top:30px;
-    padding:25px;
-    text-align:center;
-    background:#05070b;
-    color:#999;
-}
-
-@media(max-width:600px){
-    .hero h1{
-        font-size:30px;
-    }
-
-    .menu a{
-        margin-left:7px;
-        font-size:13px;
-    }
-}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#080912;color:#fff}
+header{position:sticky;top:0;z-index:20;background:#17182b;border-bottom:2px solid #ff1744;padding:14px 18px}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:800;color:#fff}
+.logo span{color:#ff1744}
+.nav a{color:#fff;text-decoration:none;margin-left:14px}
+.hero{max-width:1100px;margin:auto;padding:18px}
+.banner{height:220px;border-radius:14px;background:url('BR-MODS.jpg') center/cover;position:relative;overflow:hidden}
+.banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.1))}
+.bannerText{position:relative;z-index:1;padding:48px 25px}
+.bannerText h1{font-size:34px}.bannerText p{margin-top:8px;color:#ddd}
+.categories{max-width:1100px;margin:15px auto;padding:0 18px;display:flex;gap:10px}
+.cat{border:1px solid #ff1744;background:#17182b;color:#fff;padding:11px 22px;border-radius:25px;cursor:pointer}
+.cat.active,.cat:hover{background:#ff1744}
+.section{max-width:1100px;margin:30px auto;padding:0 18px}
+.title{text-align:center;margin-bottom:20px}.title h2{font-size:30px}.title h2 span{color:#ff1744}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:#17182b;border:1px solid #52203a;border-radius:16px;overflow:hidden}
+.card img{width:100%;height:175px;object-fit:cover;display:block}
+.content{padding:14px}.content h3{font-size:19px}.desc{color:#aaa;margin:8px 0;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{background:#0d0e1b;padding:7px 9px;border-radius:7px;font-size:13px}
+.bottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
+.price{font-size:22px;color:#18dc86;font-weight:800}.buy{background:#ff1744;border:0;color:#fff;padding:10px 18px;border-radius:9px;font-size:16px;font-weight:bold;cursor:pointer}
+.demo{background:#ff5260!important}
+footer{text-align:center;color:#aaa;padding:30px}
+.overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:50;padding:18px;overflow:auto}
+.modal{max-width:520px;margin:40px auto;background:#17182b;border:1px solid #6b2543;border-radius:18px;overflow:hidden}
+.modalHead{padding:18px;border-bottom:1px solid #402038;display:flex;justify-content:space-between}
+.close{font-size:25px;cursor:pointer;color:#aaa}.steps{display:flex;justify-content:center;gap:45px;padding:18px}
+.step{width:38px;height:38px;border-radius:50%;background:#0d0e1b;border:2px solid #ff1744;display:grid;place-items:center}.step.on{background:#ff1744}
+.form{padding:18px}.form label{display:block;color:#ccc;margin:12px 0 6px}
+select,input{width:100%;padding:13px;border-radius:9px;border:1px solid #57203b;background:#0d0e1b;color:#fff;font-size:16px}
+.paybox{background:#0d0e1b;border:1px solid #4b2036;border-radius:10px;padding:14px;margin:12px 0;line-height:1.8}
+.payrow{display:flex;justify-content:space-between;align-items:center}.copy{background:#33364b;color:#fff;border:0;padding:7px 10px;border-radius:7px}
+.next{width:100%;margin-top:14px;padding:14px;border:0;border-radius:10px;background:#16c784;color:#fff;font-weight:bold;font-size:17px}
+.note{font-size:13px;color:#aaa;margin-top:10px;line-height:1.5}
+.hidden{display:none}
+.success{background:#122d25;border:1px solid #16c784;padding:15px;border-radius:10px;line-height:1.6}
+@media(max-width:600px){.nav a{font-size:13px;margin-left:7px}.logo{font-size:20px}.banner{height:190px}.bannerText h1{font-size:28px}}
 </style>
 </head>
-
 <body>
 
 <header>
-    <div class="nav">
-        <div class="logo">SOHAN MODZ</div>
-
-        <div class="menu">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-        </div>
-    </div>
+  <div class="nav">
+    <div class="logo">SOHAN <span>MODZ OFC</span></div>
+    <div><a href="#home">Home</a><a href="#products">Products</a></div>
+  </div>
 </header>
 
-
 <section class="hero" id="home">
-
-    <h1>SOHAN MODZ OFC</h1>
-
-    <p>
-        আমাদের Digital Products & Services দেখুন।<br>
-        পছন্দের Product নিতে WhatsApp-এ যোগাযোগ করুন।
-    </p>
-
-    <a class="btn" href="#products">
-        View Products
-    </a>
-
+  <div class="banner">
+    <div class="bannerText">
+      <h1>SOHAN MODZ OFC</h1>
+      <p>Premium Digital Products & Services</p>
+    </div>
+  </div>
 </section>
 
+<div class="categories">
+  <button class="cat active" onclick="filterProducts('all',this)">▦ All</button>
+  <button class="cat" onclick="filterProducts('nonroot',this)">NON ROOT</button>
+  <button class="cat" onclick="filterProducts('root',this)">ROOT</button>
+</div>
 
-<section class="container" id="products">
+<section class="section" id="products">
+  <div class="title"><h2>আমাদের <span>পণ্যসমূহ</span></h2></div>
+  <div class="products">
 
-    <div class="title">
-        <h2>Our Products</h2>
-        <p>আপনার পছন্দের Product নির্বাচন করুন</p>
+    <div class="card" data-cat="nonroot">
+      <img src="BR-MODS.jpg" alt="BR MODS">
+      <div class="content">
+        <h3>BR MODS</h3>
+        <p class="desc">Premium digital service. বিস্তারিত জানতে বা অর্ডার করতে কিনুন বাটনে চাপুন।</p>
+        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span><span class="tag">🛡 Support</span></div>
+        <div class="bottom"><div class="price">৳80.00</div><button class="buy" onclick="openOrder('BR MODS',80)">🛒 কিনুন</button></div>
+      </div>
     </div>
 
-
-    <div class="products">
-
-
-        <!-- PRODUCT 1 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="BR MODS"
-            >
-
-            <div class="card-content">
-
-                <h3>BR MODS</h3>
-
-            <p class="description">
-    BR MODS Panel — বিস্তারিত জানতে WhatsApp-এ যোগাযোগ করুন।
-                    </p>
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 100</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20BR%20MODS%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 2 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 02"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 02</h3>
-
-                <p class="description">
-                    Premium digital service with fast support.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 150</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2002%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 03"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 03</h3>
-
-                <p class="description">
-                    Affordable digital service.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 200</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2003%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 04"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 04</h3>
-
-                <p class="description">
-                    Quality digital service.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 250</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2004%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 5 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 05"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 05</h3>
-
-                <p class="description">
-                    Fast delivery and support.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 300</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2005%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 6 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 06"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 06</h3>
-
-                <p class="description">
-                    Premium service for customers.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 350</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2006%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 7 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 07"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 07</h3>
-
-                <p class="description">
-                    Reliable digital service.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 400</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2007%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 8 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 08"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 08</h3>
-
-                <p class="description">
-                    Affordable and fast service.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 450</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2008%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 9 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 09"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 09</h3>
-
-                <p class="description">
-                    Premium customer support.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 500</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2009%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
-        <!-- PRODUCT 10 -->
-        <div class="card">
-
-            <img
-                class="product-image"
-                src="BR-MODS.jpg"
-                alt="Digital Product 10"
-            >
-
-            <div class="card-content">
-
-                <h3>Digital Service 10</h3>
-
-                <p class="description">
-                    Best value digital service.
-                </p>
-
-                <span class="badge">Available</span>
-
-                <div class="price">৳ 600</div>
-
-                <a
-                    class="buy"
-                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2010%20নিতে%20চাই"
-                    target="_blank"
-                >
-                    WhatsApp এ অর্ডার
-                </a>
-
-            </div>
-        </div>
-
-
+    <div class="card" data-cat="nonroot">
+      <img src="BR-MODS.jpg" alt="Digital Service 02">
+      <div class="content">
+        <h3>Digital Service 02</h3>
+        <p class="desc">সাশ্রয়ী digital service ও customer support.</p>
+        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">⚡ Fast</span></div>
+        <div class="bottom"><div class="price">৳100.00</div><button class="buy" onclick="openOrder('Digital Service 02',100)">🛒 কিনুন</button></div>
+      </div>
     </div>
+
+    <div class="card" data-cat="root">
+      <img src="BR-MODS.jpg" alt="Digital Service 03">
+      <div class="content">
+        <h3>Digital Service 03</h3>
+        <p class="desc">Premium digital service with fast support.</p>
+        <div class="tags"><span class="tag">🏷 Premium</span><span class="tag">🛡 Support</span></div>
+        <div class="bottom"><div class="price">৳150.00</div><button class="buy" onclick="openOrder('Digital Service 03',150)">🛒 কিনুন</button></div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+<footer>© 2026 Sohan Modz OFC • WhatsApp: 01312259496</footer>
 
-<section class="container" id="about">
+<div class="overlay" id="orderModal">
+  <div class="modal">
+    <div class="modalHead"><h2 id="modalTitle">Order</h2><span class="close" onclick="closeOrder()">×</span></div>
+    <div class="steps"><div class="step on">1</div><div class="step" id="s2">2</div><div class="step" id="s3">3</div></div>
 
-    <div class="about">
-
-        <h2>About Sohan Modz</h2>
-
-        <p>
-            আমাদের কাছ থেকে বিভিন্ন Digital Products & Services
-            সহজে নিতে পারবেন।
-        </p>
-
-        <p>
-            কোনো Product সম্পর্কে জানতে WhatsApp-এ মেসেজ করুন।
-        </p>
-
-        <a
-            class="btn"
-            href="https://wa.me/8801312259496?text=হ্যালো%20Sohan%20Modz"
-            target="_blank"
-        >
-            Contact on WhatsApp
-        </a>
-
+    <div class="form" id="step1">
+      <label>অপশন নির্বাচন</label>
+      <select id="variant" onchange="updateTotal()">
+        <option value="1">-- ভেরিয়েন্ট বাছুন --</option>
+        <option value="1">1 Day</option>
+        <option value="3">3 Days</option>
+        <option value="7">7 Days</option>
+        <option value="15">15 Days</option>
+        <option value="30">30 Days</option>
+      </select>
+      <label>পরিমাণ</label>
+      <input id="qty" type="number" min="1" value="1" onchange="updateTotal()">
+      <div class="paybox"><b>মোট মূল্য:</b> <span id="total">৳0.00</span></div>
+      <button class="next" onclick="goStep2()">→ এগিয়ে যান</button>
     </div>
 
-</section>
+    <div class="form hidden" id="step2">
+      <p>পেমেন্টের মাধ্যম নির্বাচন করুন:</p>
+      <label>Payment Method</label>
+      <select id="method">
+        <option value="bKash">bKash — Send Money</option>
+        <option value="Nagad">Nagad — Send Money</option>
+      </select>
+      <div class="paybox">
+        <div class="payrow"><span>🟣 bKash: <b>01326048602</b></span><button class="copy" onclick="copyNum('01326048602')">Copy</button></div>
+        <div class="payrow"><span>🟠 Nagad: <b>01302858682</b></span><button class="copy" onclick="copyNum('01302858682')">Copy</button></div>
+      </div>
+      <p class="note">উপরের নম্বরে Send Money করার পর Transaction ID সংগ্রহ করুন। তারপর পরের ধাপে Transaction ID দিন।</p>
+      <button class="next" onclick="goStep3()">→ Transaction ID দিন</button>
+    </div>
 
+    <div class="form hidden" id="step3">
+      <div class="success">পেমেন্ট করার পর সঠিক Transaction ID দিন। ভুল Transaction ID দিলে অর্ডার যাচাই করা যাবে না।</div>
+      <label>Transaction ID</label>
+      <input id="trx" placeholder="যেমন: 8A1B2C3D4E">
+      <label>আপনার নাম</label>
+      <input id="customer" placeholder="আপনার নাম">
+      <button class="next" onclick="submitOrder()">✓ Order Submit</button>
+      <p class="note">Submit করলে WhatsApp-এ আপনার order details খুলবে। সেখানে Send চাপলেই অর্ডার পাঠানো হবে।</p>
+    </div>
+  </div>
+</div>
 
-<footer>
+<script>
+let productName='', basePrice=0;
 
-    © 2026 Sohan Modz OFC — All Rights Reserved.
-
-</footer>
-
-
+function openOrder(name,price){
+  productName=name;basePrice=price;
+  document.getElementById('modalTitle').textContent=name;
+  document.getElementById('orderModal').style.display='block';
+  showStep(1); updateTotal();
+}
+function closeOrder(){document.getElementById('orderModal').style.display='none'}
+function showStep(n){
+  [1,2,3].forEach(i=>document.getElementById('step'+i).classList.toggle('hidden',i!==n));
+  document.querySelectorAll('.step').forEach((e,i)=>e.classList.toggle('on',i<n));
+  if(n===2)document.getElementById('s2').classList.add('on');
+  if(n===3){document.getElementById('s2').classList.add('on');document.getElementById('s3').classList.add('on')}
+}
+function updateTotal(){
+  const days=Number(document.getElementById('variant').value);
+  const qty=Math.max(1,Number(document.getElementById('qty').value||1));
+  let multiplier={1:1,3:2.25,7:3.75,15:6.25,30:9.375}[days]||1;
+  document.getElementById('total').textContent='৳'+(basePrice*multiplier*qty).toFixed(2);
+}
+function goStep2(){
+  if(document.getElementById('variant').value==='1'){alert('দয়া করে একটি ভেরিয়েন্ট নির্বাচন করুন।');return}
+  showStep(2);
+}
+function goStep3(){showStep(3)}
+function copyNum(n){navigator.clipboard.writeText(n).then(()=>alert('নম্বর Copy হয়েছে: '+n))}
+function submitOrder(){
+  const trx=document.getElementById('trx').value.trim();
+  const customer=document.getElementById('customer').value.trim()||'Customer';
+  if(!trx){alert('Transaction ID দিন।');return}
+  const days=document.getElementById('variant').value;
+  const qty=document.getElementById('qty').value;
+  const method=document.getElementById('method').value;
+  const total=document.getElementById('total').textContent;
+  const msg=`হ্যালো Sohan Modz OFC,%0A%0A🛒 Order Request%0AProduct: ${productName}%0AVariant: ${days} Day(s)%0AQuantity: ${qty}%0APayment: ${method}%0ATotal: ${total}%0AName: ${encodeURIComponent(customer)}%0ATransaction ID: ${encodeURIComponent(trx)}%0A%0Aআমি Send Money payment করেছি। দয়া করে আমার order যাচাই করুন।`;
+  window.open('https://wa.me/8801312259496?text='+msg,'_blank');
+}
+function filterProducts(cat,btn){
+  document.querySelectorAll('.cat').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none');
+}
+window.onclick=e=>{if(e.target===document.getElementById('orderModal'))closeOrder()}
+</script>
 </body>
 </html>
