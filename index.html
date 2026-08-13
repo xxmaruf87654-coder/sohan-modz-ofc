@@ -169,6 +169,26 @@ header{
   position:relative;
   overflow:hidden;
 }
+.productImage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+
+.imageOverlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.25);
+  z-index:1;
+}
+
+.productLogo{
+  position:relative;
+  z-index:2;
+}
+
 
 .productImage:before{
   content:"";
