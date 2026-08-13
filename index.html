@@ -8,627 +8,599 @@
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#080912;
-  color:#fff;
+    font-family:Arial,sans-serif;
+    background:#080b12;
+    color:#fff;
 }
 
-/* HEADER */
 header{
-  height:75px;
-  background:#17182b;
-  border-bottom:2px solid #ff1744;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 18px;
-  position:sticky;
-  top:0;
-  z-index:100;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#111827;
+    border-bottom:2px solid #ff1744;
+    padding:15px;
 }
 
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-  width:48px;
-  height:48px;
-  border-radius:12px;
-  background:#11121f;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  border:1px solid #ff1744;
+    font-size:22px;
+    font-weight:bold;
+    color:#ff1744;
 }
 
-.logo-area h2{
-  font-size:21px;
-  letter-spacing:.5px;
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:15px;
 }
 
-.header-buttons{
-  display:flex;
-  gap:10px;
+.hero{
+    text-align:center;
+    padding:55px 20px;
+    background:linear-gradient(135deg,#111827,#080b12);
 }
 
-.header-btn{
-  width:48px;
-  height:48px;
-  border-radius:12px;
-  border:1px solid #ff1744;
-  background:#11121f;
-  color:white;
-  font-size:21px;
+.hero h1{
+    font-size:38px;
+    color:#ff1744;
+    margin-bottom:12px;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:25px 15px 50px;
-}
-
-/* CATEGORY */
-.categories{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  margin:10px 0 35px;
-}
-
-.category{
-  padding:12px 25px;
-  border-radius:12px;
-  border:1px solid #ff1744;
-  background:#17182b;
-  color:#ddd;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.category.active{
-  background:#ff1744;
-  color:white;
-  box-shadow:0 0 20px rgba(255,23,68,.35);
-}
-
-/* TITLE */
-.title{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:25px;
-}
-
-.title-line{
-  flex:1;
-  height:1px;
-  background:#ff1744;
-}
-
-.title h1{
-  font-size:25px;
-  letter-spacing:2px;
-}
-
-/* PRODUCTS */
-.products{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-/* CARD */
-.card{
-  background:#17182b;
-  border:1px solid #472034;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 0 15px rgba(0,0,0,.3);
-}
-
-.card-top{
-  padding:15px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.product-icon{
-  width:55px;
-  height:55px;
-  border-radius:12px;
-  background:#10111e;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-}
-
-.card-top h3{
-  font-size:17px;
-}
-
-.status{
-  display:block;
-  color:#19d889;
-  font-size:13px;
-  margin-top:6px;
-}
-
-/* PRODUCT IMAGE */
-.product-image{
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  background:#10111e;
-  display:block;
-}
-
-/* CARD CONTENT */
-.card-content{
-  padding:15px;
-}
-
-.description{
-  color:#aeb0c0;
-  font-size:14px;
-  margin-bottom:14px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-/* TAGS */
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-bottom:15px;
-}
-
-.tag{
-  background:#0d0e19;
-  border-radius:7px;
-  padding:7px 10px;
-  color:#bfc2d0;
-  font-size:13px;
-}
-
-/* PRICE */
-.price-area{
-  border-top:1px solid #402034;
-  padding:15px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.price{
-  color:#20d993;
-  font-size:20px;
-  font-weight:bold;
-}
-
-.buttons{
-  display:flex;
-  gap:8px;
+.hero p{
+    color:#ddd;
+    line-height:1.7;
 }
 
 .btn{
-  border:0;
-  border-radius:10px;
-  padding:12px 18px;
-  font-size:15px;
-  font-weight:bold;
-  color:white;
-  text-decoration:none;
-  cursor:pointer;
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    background:#ff1744;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-.demo{
-  background:#ff4b52;
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.title h2{
+    color:#ff1744;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #263044;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#ff1744;
+}
+
+.product-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.description{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.price{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:bold;
+    color:#00e676;
 }
 
 .buy{
-  background:#ff101c;
-}
-
-.btn:hover{
-  opacity:.85;
-  transform:scale(1.02);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  color:#777;
-  margin-top:40px;
-  padding:20px;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .categories{
-    overflow-x:auto;
-    justify-content:flex-start;
-    padding-bottom:5px;
-  }
-
-  .category{
-    white-space:nowrap;
-  }
-
-  .price-area{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .price{
-    text-align:left;
-  }
-
-  .buttons{
-    width:100%;
-  }
-
-  .btn{
-    flex:1;
+    display:block;
     text-align:center;
-  }
+    margin-top:15px;
+    padding:11px;
+    background:#25d366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+}
 
-  .product-image{
-    height:200px;
-  }
+.badge{
+    display:inline-block;
+    margin-top:10px;
+    padding:5px 9px;
+    background:#202938;
+    color:#ff1744;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.about{
+    text-align:center;
+    background:#111827;
+    border-radius:12px;
+    padding:30px 20px;
+    line-height:1.8;
+}
+
+footer{
+    margin-top:30px;
+    padding:25px;
+    text-align:center;
+    background:#05070b;
+    color:#999;
+}
+
+@media(max-width:600px){
+    .hero h1{
+        font-size:30px;
+    }
+
+    .menu a{
+        margin-left:7px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
+    <div class="nav">
+        <div class="logo">SOHAN MODZ</div>
 
-  <div class="logo-area">
-    <div class="logo">⚡</div>
-    <h2>SOHAN MODZ OFC</h2>
-  </div>
-
-  <div class="header-buttons">
-    <button class="header-btn">👤</button>
-    <button class="header-btn">⚙️</button>
-  </div>
-
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
 </header>
 
 
-<div class="container">
+<section class="hero" id="home">
 
-  <!-- CATEGORY -->
-  <div class="categories">
+    <h1>SOHAN MODZ OFC</h1>
 
-    <button class="category active" onclick="showCategory('all',this)">
-      ▦ All
-    </button>
+    <p>
+        আমাদের Digital Products & Services দেখুন।<br>
+        পছন্দের Product নিতে WhatsApp-এ যোগাযোগ করুন।
+    </p>
 
-    <button class="category" onclick="showCategory('nonroot',this)">
-      NON ROOT
-    </button>
+    <a class="btn" href="#products">
+        View Products
+    </a>
 
-    <button class="category" onclick="showCategory('root',this)">
-      ROOT
-    </button>
-
-  </div>
+</section>
 
 
-  <!-- TITLE -->
-  <div class="title">
-    <div class="title-line"></div>
-    <h1>NON ROOT</h1>
-    <div class="title-line"></div>
-  </div>
+<section class="container" id="products">
 
-
-  <!-- PRODUCTS -->
-  <div class="products">
-
-
-    <!-- PRODUCT 1 -->
-    <div class="card" data-category="nonroot">
-
-      <div class="card-top">
-
-        <div class="product-icon">🤖</div>
-
-        <div>
-          <h3>Digital Service 01</h3>
-          <span class="status">● Available</span>
-        </div>
-
-      </div>
-
-      <!-- নিজের ছবির URL এখানে বসাবে -->
-      <img class="product-image"
-src="BR-MODS.jpg"com/600x350/111827/ffffff?text=SOHAN+MODZ"
-        alt="BR MODS"
-
-      <div class="card-content">
-
-        <p class="description">
-          Premium digital service with fast support.
-        </p>
-
-        <div class="tags">
-          <span class="tag">🏷️ Premium</span>
-          <span class="tag">⚡ Fast</span>
-          <span class="tag">🛡️ Support</span>
-        </div>
-
-      </div>
-
-      <div class="price-area">
-
-        <div class="price">
-          🏷️ মূল্য ৳80.00
-        </div>
-
-        <div class="buttons">
-
-          <a class="btn demo"
-             href="#"
-             target="_blank">
-             ▶ Demo
-          </a>
-
-          <a class="btn buy"
-             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2001%20নিতে%20চাই"
-             target="_blank">
-             🛒 কিনুন
-          </a>
-
-        </div>
-
-      </div>
-
+    <div class="title">
+        <h2>Our Products</h2>
+        <p>আপনার পছন্দের Product নির্বাচন করুন</p>
     </div>
 
 
-    <!-- PRODUCT 2 -->
-    <div class="card" data-category="nonroot">
+    <div class="products">
 
-      <div class="card-top">
 
-        <div class="product-icon">🤖</div>
+        <!-- PRODUCT 1 -->
+        <div class="card">
 
-        <div>
-          <h3>Digital Service 02</h3>
-          <span class="status">● Available</span>
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="BR MODS"
+            >
+
+            <div class="card-content">
+
+                <h3>BR MODS</h3>
+
+                <p class="description">
+                    Premium digital service.
+                    বিস্তারিত জানতে WhatsApp-এ যোগাযোগ করুন।
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 100</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20BR%20MODS%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
         </div>
 
-      </div>
 
-      <img
-        class="product-image"
-        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+02"
-        alt="Product">
+        <!-- PRODUCT 2 -->
+        <div class="card">
 
-      <div class="card-content">
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 02"
+            >
 
-        <p class="description">
-          Quality digital service and online support.
+            <div class="card-content">
+
+                <h3>Digital Service 02</h3>
+
+                <p class="description">
+                    Premium digital service with fast support.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 150</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2002%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 03"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 03</h3>
+
+                <p class="description">
+                    Affordable digital service.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 200</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2003%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 04"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 04</h3>
+
+                <p class="description">
+                    Quality digital service.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 250</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2004%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 05"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 05</h3>
+
+                <p class="description">
+                    Fast delivery and support.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 300</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2005%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 06"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 06</h3>
+
+                <p class="description">
+                    Premium service for customers.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 350</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2006%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 07"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 07</h3>
+
+                <p class="description">
+                    Reliable digital service.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 400</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2007%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 08"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 08</h3>
+
+                <p class="description">
+                    Affordable and fast service.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 450</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2008%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 9 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 09"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 09</h3>
+
+                <p class="description">
+                    Premium customer support.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 500</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2009%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 10 -->
+        <div class="card">
+
+            <img
+                class="product-image"
+                src="BR-MODS.jpg"
+                alt="Digital Product 10"
+            >
+
+            <div class="card-content">
+
+                <h3>Digital Service 10</h3>
+
+                <p class="description">
+                    Best value digital service.
+                </p>
+
+                <span class="badge">Available</span>
+
+                <div class="price">৳ 600</div>
+
+                <a
+                    class="buy"
+                    href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2010%20নিতে%20চাই"
+                    target="_blank"
+                >
+                    WhatsApp এ অর্ডার
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="container" id="about">
+
+    <div class="about">
+
+        <h2>About Sohan Modz</h2>
+
+        <p>
+            আমাদের কাছ থেকে বিভিন্ন Digital Products & Services
+            সহজে নিতে পারবেন।
         </p>
 
-        <div class="tags">
-          <span class="tag">🏷️ Premium</span>
-          <span class="tag">⚡ Fast</span>
-          <span class="tag">💬 Support</span>
-        </div>
+        <p>
+            কোনো Product সম্পর্কে জানতে WhatsApp-এ মেসেজ করুন।
+        </p>
 
-      </div>
-
-      <div class="price-area">
-
-        <div class="price">
-          🏷️ মূল্য ৳100.00
-        </div>
-
-        <div class="buttons">
-
-          <a class="btn demo"
-             href="#"
-             target="_blank">
-             ▶ Demo
-          </a>
-
-          <a class="btn buy"
-             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2002%20নিতে%20চাই"
-             target="_blank">
-             🛒 কিনুন
-          </a>
-
-        </div>
-
-      </div>
+        <a
+            class="btn"
+            href="https://wa.me/8801312259496?text=হ্যালো%20Sohan%20Modz"
+            target="_blank"
+        >
+            Contact on WhatsApp
+        </a>
 
     </div>
 
-
-    <!-- PRODUCT 3 -->
-    <div class="card" data-category="root">
-
-      <div class="card-top">
-
-        <div class="product-icon">🤖</div>
-
-        <div>
-          <h3>Digital Service 03</h3>
-          <span class="status">● Available</span>
-        </div>
-
-      </div>
-
-      <img
-        class="product-image"
-        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+03"
-        alt="Product">
-
-      <div class="card-content">
-
-        <p class="description">
-          Premium service with customer support.
-        </p>
-
-        <div class="tags">
-          <span class="tag">⚡ Fast</span>
-          <span class="tag">💎 Premium</span>
-          <span class="tag">🛡️ Support</span>
-        </div>
-
-      </div>
-
-      <div class="price-area">
-
-        <div class="price">
-          🏷️ মূল্য ৳70.00
-        </div>
-
-        <div class="buttons">
-
-          <a class="btn demo"
-             href="#"
-             target="_blank">
-             ▶ Demo
-          </a>
-
-          <a class="btn buy"
-             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2003%20নিতে%20চাই"
-             target="_blank">
-             🛒 কিনুন
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
+</section>
 
 
-    <!-- PRODUCT 4 -->
-    <div class="card" data-category="root">
+<footer>
 
-      <div class="card-top">
+    © 2026 Sohan Modz OFC — All Rights Reserved.
 
-        <div class="product-icon">🤖</div>
+</footer>
 
-        <div>
-          <h3>Digital Service 04</h3>
-          <span class="status">● Available</span>
-        </div>
-
-      </div>
-
-      <img
-        class="product-image"
-        src="https://via.placeholder.com/600x350/111827/ffffff?text=SERVICE+04"
-        alt="Product">
-
-      <div class="card-content">
-
-        <p class="description">
-          Affordable digital service for customers.
-        </p>
-
-        <div class="tags">
-          <span class="tag">⚡ Fast</span>
-          <span class="tag">🏷️ Low Price</span>
-          <span class="tag">💬 Support</span>
-        </div>
-
-      </div>
-
-      <div class="price-area">
-
-        <div class="price">
-          🏷️ মূল্য ৳30.00
-        </div>
-
-        <div class="buttons">
-
-          <a class="btn demo"
-             href="#"
-             target="_blank">
-             ▶ Demo
-          </a>
-
-          <a class="btn buy"
-             href="https://wa.me/8801312259496?text=আমি%20Digital%20Service%2004%20নিতে%20চাই"
-             target="_blank">
-             🛒 কিনুন
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-
-  <footer>
-    © 2026 Sohan Modz OFC — All Rights Reserved
-  </footer>
-
-</div>
-
-
-<script>
-
-function showCategory(category,button){
-
-  document.querySelectorAll(".category").forEach(function(btn){
-    btn.classList.remove("active");
-  });
-
-  button.classList.add("active");
-
-  document.querySelectorAll(".card").forEach(function(card){
-
-    if(category === "all"){
-      card.style.display = "block";
-    }
-
-    else if(card.dataset.category === category){
-      card.style.display = "block";
-    }
-
-    else{
-      card.style.display = "none";
-    }
-
-  });
-
-}
-
-</script>
 
 </body>
-  </html>
+</html>
