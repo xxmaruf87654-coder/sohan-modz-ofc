@@ -1194,6 +1194,22 @@ function openOrder(name){
     "variant"
   ).value = "";
 
+  if (name === "BALA MODS NON ROOT") {
+
+    document.getElementById("variant").innerHTML = `
+        <option value="">-- ভেরিয়েন্ট বাছুন --</option>
+        <option value="1">1 Hour - ৳30</option>
+        <option value="3">3 Hours - ৳60</option>
+        <option value="6">6 Hours - ৳90</option>
+        <option value="12">12 Hours - ৳270</option>
+        <option value="24">24 Hours (1 Day) - ৳300</option>
+        <option value="48">48 Hours (2 Days) - ৳550</option>
+        <option value="72">72 Hours (3 Days) - ৳750</option>
+        <option value="168">168 Hours (7 Days) - ৳2200</option>
+    `;
+
+  }
+
   document.getElementById(
     "qty"
   ).value = 1;
@@ -1247,30 +1263,43 @@ function showStep(n){
 
 function updateTotal(){
 
-  const days =
-    document.getElementById(
-      "variant"
-    ).value;
+    const days =
+        document.getElementById("variant").value;
 
-  const qty =
-    Math.max(
-      1,
-      Number(
-        document.getElementById(
-          "qty"
-        ).value || 1
-      )
-    );
+    const qty =
+        Math.max(
+            1,
+            Number(
+                document.getElementById("qty").value || 1
+            )
+        );
 
-  const price =
-    prices[days] || 0;
+    let price = 0;
 
-  document.getElementById(
-    "total"
-  ).textContent =
-    "৳" +
-    (price * qty).toFixed(2);
+    // BALA MODS NON ROOT PRICE
+    if (productName === "BALA MODS NON ROOT") {
 
+        const balaPrices = {
+            1: 30,
+            3: 60,
+            6: 90,
+            12: 270,
+            24: 300,
+            48: 550,
+            72: 750,
+            168: 2200
+        };
+
+        price = balaPrices[days] || 0;
+
+    } else {
+
+        // অন্যান্য product-এর পুরোনো price
+        price = prices[days] || 0;
+    }
+
+    document.getElementById("total").textContent =
+        "৳" + (price * qty).toFixed(2);
 }
 
 
